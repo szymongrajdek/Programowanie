@@ -13,5 +13,9 @@ int rzut()
 
 int main()
 {
-    return (rzut());
+    for(int i=0; i<10; ++i)
+    {
+        cout << rzut() << endl;
+    }
+    return 0;
 }
