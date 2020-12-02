@@ -1,6 +1,9 @@
 on: [push,pull_request]
 jobs:
-  maanam:
+  job_id:
     steps:
       - run: echo Hello World
-    runs-on: ubuntu-latest
+    runs-on: ${{matrix.platform}}
+    strategy:
+      matrix:
+        platform: [macos-latest, windows-latest, ubuntu-latest]
